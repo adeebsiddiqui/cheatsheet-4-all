@@ -1,0 +1,105 @@
+Legend: <> = variable, [] = optional
+====================================
+Theory
+------
+Working Tree/Directory -> Index/Staging Area -> Local Repository -> Remote Repository
+A file is 'Untracked' in Working Directory if it is not in index or has never been committed to Local Repository
+HEAD usually is a reference to the currently checked-out branch which always points to its most recent commit. The latest commit in a branch is also known as 'the tip' of the branch.
+HEAD~ or HEAD~1 = Commit-hash previuos to the latest one
+
+Commands
+--------
+$ git config --global user.name "Adeeb Siddiqui"
+$ git config --global user.email "adeeb.bd@gmail.com"
+##### Above two configs will be set globally in .gitconfig file [.gitconfig file is located in C:\Users\Adeeb]
+
+$ git config -l | --list		--> list all git configuration variables
+
+$ git help [<command>] OR git [<command>] -h | --help
+
+$ git status
+
+$ git init [<directory>] 	--> Create a new local repository in specified directory
+
+$ git checkout .	--> discard changes in Working Directory for all tracked files only
+
+$ git add .			--> stage all the files in current Working Directory to Index
+
+$ git reset [<file>]...					--> unstage all/specific tracked file(s). To be more specific, Reset all/specific tracked files in HEAD+Index to latest commit + preserve changes to ALL files in Working Directory.
+$ git reset <commit-hash> [<file>]...	--> Discard all commits after <commit-hash> + Reset all/specific tracked files in HEAD+Index to <commit-hash> + preserve changes to ALL files in Working Directory.
+& git reset --hard [<file>]...			--> Reset all/specific tracked files in HEAD+Index+Working Directory to the latest commit + preserve changes to untracked files in working directory.
+
+***** git reset is same as git reset --mixed *****
+***** git reset --soft/mixed/hard can be used using commit-hash or HEAD/HEAD~1/HEAD~2... *****
+***** To learn in depth about git reset check out the bookmarked pages *****
+
+
+$ git commit 					--> Commit changes to Local Repository
+$ git commit -m 'message'		--> Commit changes with a message
+$ git commit -am 'message'		--> except Untracked files, commit all the changes in Working Directory to Local Repository directly
+$ git commit --amend -m 'New message'	--> edit most recent commit message
+
+$ git log [--oneline][-n]	--> display all commits [-n = display last n commits]
+
+$ git log --oneline --graph --decorate --all --> show graph in terminal
+$ gitk --all	--> show graph in a new window
+
+
+***** NON COMMITTED changes in one branch ROLLS OVER to the other checked out branch, so its better to STASH or COMMIT changes before switching branches ***** 
+
+
+$ git branch							--> list all local branches
+$ git branch -r							--> list all remote branches
+$ git branch -a							--> list all local + remote branches
+$ git branch feature					--> create a branch named 'feature'
+$ git branch -d <branch>				--> delete the branch if it has already been fully merged in its upstream branch
+$ git branch -D <branch>				--> delete the branch irrespective of its merged status
+
+$ git checkout feature					--> go to branch named 'feature'
+$ git checkout -b feature				--> create 'feature' branch off of last commit of currently checked out branch and immediately go to 'feature' branch
+$ git checkout -b feature <commit-hash>	--> create 'feature' branch off of commit-hash of currently checked out branch and immediately go to 'feature' branch
+$ git checkout -b feature master		--> create 'feature' branch off of last commit of 'master' branch and immediately go to 'feature' branch
+$ git checkout <commit-hash>			--> move HEAD to <commit-hash> //https://git-scm.com/docs/git-checkout/#_detached_head
+
+
+$ git stash 				--> stores away the dirty state (i.e. tracked but uncommitted files) of a branch in the 'Stash Stack'
+$ git stash list			--> See list of stashes stored on the 'Stash Stack'
+$ git stash save 'message'	--> Stash with a message
+$ git stash save -u			--> Stash untracked files also
+$ git stash pop 			--> Removes the top most stash from the 'Stash Stack' and applies it
+$ git stash drop			--> Delete latest stash from 'Stash Stack' (add stash-id to delete specific stash)
+
+
+$ git fetch										--> update all remote-tracking branches info. No files are updated in Working Directory or Local Repository
+$ git pull										--> fetch and merge from remote version of the current local branch to Working Directory and also update all the other remote-tracking branches info
+$ git push										--> push code to remote version of the current local branch
+$ git clone <local repo path/remote repo url>	--> clone a repository into current directory
+
+$ git remote [-v]								--> shows aliases of list of tracked Remote Repositories; -v shows the url as well
+$ git remote add <remoteRepoAlias> <URL>		--> add a remote repo to list of tracked Remote Repositories
+$ git remote remove <remoteRepoAlias> 			--> remove alias of remote repo from list of tracked Remote Repositories
+
+
+$ git merge feature				--> Add a new merge commit in current branch after selecting all the commits from feature branch which are not in current branch and add them to current branch by positioning them based on ascending commit time of non-identical commits between current and feature branch
+$ git merge feature master		--> Add a new merge commit in feature branch after selecting all the commits from master branch which are not in feature branch and add them to feature branch by positioning them based on ascending commit time of non-identical commits between master and feature branch
+$ git merge --squash feature	-->	summarize all commit(s) from 'feature' branch into one commit and add that summarized commit into in current branch
+$ git merge --abort				--> abort the current conflict resolution process and try to reconstruct the pre-merge state
+$ git mergetool	[xyz]			--> run a code comparing tool to resolve merge conflicts
+
+$ git rebase <branch-name>		--> Rebase current branch with branch-name
+*** if there are merge conflicts, resolve them then mark them as resolved using git add and then do git rebase --continue ***
+
+$ git rebase -i <commit-hash>	--> to edit/squash previous commits [https://www.internalpointers.com/post/squash-commits-into-one-git]
+
+$ git cherry-pick <commit-hash>		--> Merge specific commit(s) of another branch to current branch
+
+
+$ git diff [file]					--> compare latest change of tracked file(s) in Working Directory
+$ git diff HEAD [file]				--> compare Working Directory with HEAD of current branch
+$ git diff <branch> [file]			--> compare Working Directory of current branch with HEAD of another branch
+$ git diff --cached [HEAD] [file]	--> compare Index with HEAD of current branch
+$ git diff --cached <branch> [file]	--> compare Index of current branch with HEAD of another branch
+$ git diff <branch1> <branch2>		--> compare HEAD of two branches
+$ git diff <commitId1> <commitId1>	--> compare files between two different commits
+$ git diff HEAD HEAD~1 [file]		--> compare HEAD and HEAD-1 versions
+$ git difftool [xyz]				--> run a code comparing tool to compare differences

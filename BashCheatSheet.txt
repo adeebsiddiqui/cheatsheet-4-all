@@ -1,0 +1,77 @@
+Legend: <> = variable, [] = optional
+====================================
+whoami							--> display logged in user
+
+pwd								--> print present working directory
+
+<command> --help
+OR 								--> display the help or manual page for a command
+man <command>
+
+history							--> show command history
+
+Ctrl+R							--> search command from history
+
+mkdir <foo>						--> creates a directory or folder named foo
+
+touch <file>... 				--> create or update file(s)
+
+cd OR cd ~						--> go to home directory
+cd <foo>						--> go inside foo directory
+
+ls								--> list items in currrent directory
+ls -l							--> list items in currrent directory in long format
+
+ls -a							--> list items in currrent directory including hidden files or folders [note: hidden files starts with '.' in UNIX]
+ls -al							--> list items in currrent directory in long format including hidden files or folders
+
+cp <file1> <file2>				--> copy <file1> to <file2>
+cp -r <foo1> <foo2>				--> copy directory <foo1> to <foo2>. create <foo2> if it doesn't exist
+
+mv <foo1> <foo2>				--> rename or move file/directory <foo1> to file/directory <foo2>
+
+rm <file>... 					--> remove or delete file(s)
+rm -r <foo>... 					--> remove or delete directory(s)
+rm -f <foo>						--> force delete a file or directory
+
+vi <file> OR vim <file>			--> create &/ edit a file
+
+clip < <file>					-->	copy texts of file to clipboard [for MAC use pbcopy, for Linux install xclip then use it]
+
+
+find -name <foo>				--> Find a file/folder called <foo> in current and sub-directories [find command is by default case-sensitive, type '-iname' for case-insensitive search]
+find [PATH] -name <foo>			--> Find a file/folder called <foo> in PATH and its sub-directories
+find -type f -name <file>		--> Find a file called <file> in current and sub-directories
+find -type d -name <folder>		--> Find a folder called <folder> in current and sub-directories
+find -maxdepth 1 -name <foo>  	--> Find a file/folder called <foo> in current directory only
+
+locate -i <foo>					--> Same as 'find' but used for faster and simpler search [-i ignore case]
+
+grep -wi PATTERN <file>... 		--> find PATTERN in file(s) named <file>... in current directory. If found then print filename(s) and also the line which has the PATTERN [-w force PATTERN to match only whole words, -i ignore case of PATTERN]
+grep -ln PATTERN <file>... 		--> -l print only filename, not line. -n print line number [DO NOT use -l and -n options together]
+grep -r --include="*.xml" PATTERN	--> print filename(s) and also the line in those files which has PATTERN in current and sub-directories. --include only look for files with certain extensions
+
+
+cat -n <file>					--> display the contents of <file> [-n display line numbers]
+
+
+tail -f <file>					--> display the last 10 lines of <file> and monitor appension of new line [Ctrl+C to go back to terminal]
+
+less -N <file>					--> display the contents of <file> by page [-N display line numbers]
+less +F <file>					--> monitor appension of new line after end of line [ ctrl+c to return to regular less mode, shift+f to start monitoring again]
+less --help
+searching using less command is case-sensitive by default. Type '-I' in less to do case-insensitive search
+
+file <foo>						--> display the type of file <foo>
+file *							--> display the type of all files in PWD
+
+alias 							--> see the list of shortcuts(=alias) to a command or group of commands
+alias <alias_name>='command' 	--> Create an alias called <alias_name> for 'command' [there cannot be a space between the <alias_name> and the EQUAL sign and the opening quote for the command]
+unalias <alias_name> 			--> Remove alias
+
+
+
+
+For Redirection and Piping see Ryan's Tutorials - https://ryanstutorials.net/linuxtutorial/piping.php
+
+https://askubuntu.com/questions/12098/what-does-outputting-to-dev-null-accomplish-in-bash-scripts
