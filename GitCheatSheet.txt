@@ -103,3 +103,10 @@ $ git diff <branch1> <branch2>		--> compare HEAD of two branches
 $ git diff <commitId1> <commitId1>	--> compare files between two different commits
 $ git diff HEAD HEAD~1 [file]		--> compare HEAD and HEAD-1 versions
 $ git difftool [xyz]				--> run a code comparing tool to compare differences
+
+
+Recover from git reset --hard
+-----------------------------
+git fsck --lost-found; Running that then saves the dangling blobs to the path .git/lost-found/other
+https://stackoverflow.com/questions/5788037/recover-from-git-reset-hard
+https://stackoverflow.com/questions/7374069/undo-git-reset-hard-with-uncommitted-files-in-the-staging-area
