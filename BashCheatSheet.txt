@@ -9,13 +9,15 @@ OR 								--> display the help or manual page for a command
 man <command>
 
 history							--> show command history
+!history_number					--> Run that particular command
 
-Ctrl+R							--> search command from history
+Ctrl+R							--> search command history while typing [keep pressing Ctrl+R to see commands having typed word from history. Hit any arrow button to select the command you want to execute]
 
 mkdir <foo>						--> creates a directory or folder named foo
 
 touch <file>... 				--> create or update file(s)
 
+cd /							--> go to root directory
 cd OR cd ~						--> go to home directory
 cd <foo>						--> go inside foo directory
 
