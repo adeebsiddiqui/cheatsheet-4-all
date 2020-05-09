@@ -11,7 +11,7 @@ man <command>
 history							--> show command history
 !history_number					--> Run that particular command
 
-Ctrl+R							--> search command history while typing [keep pressing Ctrl+R to see commands having typed word from history. Hit any arrow button to select the command you want to execute]
+ctrl+r							--> search command history while typing [keep pressing Ctrl+R to see commands having typed word from history. Hit any arrow button to select the command you want to execute]
 
 mkdir <foo>						--> creates a directory or folder named foo
 
@@ -19,11 +19,10 @@ touch <file>... 				--> create or update file(s)
 
 cd /							--> go to root directory
 cd OR cd ~						--> go to home directory
-cd <foo>						--> go inside foo directory
+cd -							--> go to the last directory you were just in
 
 ls								--> list items in currrent directory
 ls -l							--> list items in currrent directory in long format
-
 ls -a							--> list items in currrent directory including hidden files or folders [note: hidden files starts with '.' in UNIX]
 ls -al							--> list items in currrent directory in long format including hidden files or folders
 
@@ -36,10 +35,7 @@ rm <file>... 					--> remove or delete file(s)
 rm -r <foo>... 					--> remove or delete directory(s)
 rm -f <foo>						--> force delete a file or directory
 
-vi <file> OR vim <file>			--> create &/ edit a file
-
 clip < <file>					-->	copy texts of file to clipboard [for MAC use pbcopy, for Linux install xclip then use it]
-
 
 find -name <foo>				--> Find a file/folder called <foo> in current and sub-directories [find command is by default case-sensitive, type '-iname' for case-insensitive search]
 find [PATH] -name <foo>			--> Find a file/folder called <foo> in PATH and its sub-directories
@@ -53,11 +49,9 @@ grep -wi PATTERN <file>... 		--> find PATTERN in file(s) named <file>... in curr
 grep -ln PATTERN <file>... 		--> -l print only filename, not line. -n print line number [DO NOT use -l and -n options together]
 grep -r --include="*.xml" PATTERN	--> print filename(s) and also the line in those files which has PATTERN in current and sub-directories. --include only look for files with certain extensions
 
-
 cat -n <file>					--> display the contents of <file> [-n display line numbers]
 
-
-tail -f <file>					--> display the last 10 lines of <file> and monitor appension of new line [Ctrl+C to go back to terminal]
+tail -f <file>					--> display the last 10 lines of <file> and monitor appension of new line [ctrl+c to go back to terminal]
 
 less -N <file>					--> display the contents of <file> by page [-N display line numbers]
 less +F <file>					--> monitor appension of new line after end of line [ ctrl+c to return to regular less mode, shift+f to start monitoring again]
@@ -70,8 +64,6 @@ file *							--> display the type of all files in PWD
 alias 							--> see the list of shortcuts(=alias) to a command or group of commands
 alias <alias_name>='command' 	--> Create an alias called <alias_name> for 'command' [there cannot be a space between the <alias_name> and the EQUAL sign and the opening quote for the command]
 unalias <alias_name> 			--> Remove alias
-
-
 
 
 For Redirection and Piping see Ryan's Tutorials - https://ryanstutorials.net/linuxtutorial/piping.php
