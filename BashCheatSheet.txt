@@ -45,9 +45,9 @@ find -maxdepth 1 -name <foo>  	--> Find a file/folder called <foo> in current di
 
 locate -i <foo>					--> Same as 'find' but used for faster and simpler search [-i ignore case]
 
-grep -wi PATTERN <file>... 		--> find PATTERN in file(s) named <file>... in current directory. If found then print filename(s) and also the line which has the PATTERN [-w force PATTERN to match only whole words, -i ignore case of PATTERN]
+grep -wi PATTERN <file>... 		--> find PATTERN in file(s) named <file>... in current directory. If found then print the line which has the PATTERN [-w force PATTERN to match only whole words, -i ignore case of PATTERN]
 grep -ln PATTERN <file>... 		--> -l print only filename, not line. -n print line number [DO NOT use -l and -n options together]
-grep -r --include="*.xml" PATTERN	--> print filename(s) and also the line in those files which has PATTERN in current and sub-directories. --include only look for files with certain extensions
+grep -r PATTERN --include="*.xml"	--> print filename(s) and also the line in those files which has PATTERN in current and sub-directories. --include only look for files with certain extensions
 
 cat -n <file>					--> display the contents of <file> [-n display line numbers]
 
