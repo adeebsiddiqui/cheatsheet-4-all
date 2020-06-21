@@ -37,8 +37,7 @@ rm -f <foo>						--> force delete a file or directory
 
 clip < <file>					-->	copy texts of file to clipboard [for MAC use pbcopy, for Linux install xclip then use it]
 
-find -name <foo>				--> Find a file/folder called <foo> in current and sub-directories [find command is by default case-sensitive, type '-iname' for case-insensitive search]
-find [PATH] -name <foo>			--> Find a file/folder called <foo> in PATH and its sub-directories
+find [PATH] -name <foo>			--> Find a file/folder called <foo> in PATH and its sub-directories [find command is by default case-sensitive, type '-iname' for case-insensitive search]
 find -type f -name <file>		--> Find a file called <file> in current and sub-directories
 find -type d -name <folder>		--> Find a folder called <folder> in current and sub-directories
 find -maxdepth 1 -name <foo>  	--> Find a file/folder called <foo> in current directory only
