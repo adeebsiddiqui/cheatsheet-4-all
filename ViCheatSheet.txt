@@ -26,8 +26,8 @@ go to beginning of file		-->		gg
 go to end of file			-->		G
 go to line n				-->		:n OR ngg OR nG
 
-scroll down one line			-->		ctrl+y
-scroll up one line				-->		ctrl+e
+scroll down one line			-->		ctrl+e
+scroll up one line				-->		ctrl+y
 scroll down one screen			-->		ctrl+f
 scroll up one screen			-->		ctrl+b
 scroll down one-half screen		-->		ctrl+d
@@ -39,7 +39,7 @@ undo all changes on a single line --> U
 
 insert new line after current line		-->		o
 insert new line before current line		-->		O
-inset at the end of line				-->		shift+a
+insert at the end of line				-->		shift+a
 
 
 delete/cut next character from cursor		-->		x
