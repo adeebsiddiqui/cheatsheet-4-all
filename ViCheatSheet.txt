@@ -4,7 +4,7 @@ displays all option settings on terminal		-->		:set all
 Code syntax highlighting on						-->		:syntax on
 Display line number								-->		:set nu
 
-[These configurations can be permanently set by creating a .vimrc file in home directory ~]
+[These configurations can be permanently set by creating a .exrc(for Vi+Vim) OR .vimrc(for Vim only) file in $HOME directory ~]
 
 move cursor to beginning of next line		-->		Return/Enter OR +
 move cursor to beginning of previous line	-->		-
@@ -62,8 +62,10 @@ copy entire line					-->		yy
 paste after cursor		-->		p
 paste before cursor		-->		P
 
-/pattern	-->		search pattern forward [n - next match, N - previous match]
-?pattern	-->		search pattern backward [n - next match, N - previous match]
+/pattern		-->		search pattern forward [n - next match, N - previous match]
+?pattern		-->		search pattern backward [by default, searches are case sensitive. In command mode, :set ic - case insensitive search, :set noic - revert back to case sensitive search]
+/\<pattern\>	-->		search exact pattern [by default, search results are not highlighted. In command mode, :set hlsearch - highlighted search, :set nohlsearch - revert back to non highlighted search]
+
 replace all occurences of pattern 1 with pattern 2 throughout the file	-->		:%s/pat1/pat2/gc [c to get a confirmation message]
 
 
