@@ -48,14 +48,13 @@ grep -wi PATTERN <file>... 		--> find PATTERN in file(s) named <file>... in curr
 grep -ln PATTERN <file>... 		--> -l print only filename, not line. -n print line number [DO NOT use -l and -n options together]
 grep -r PATTERN --include="*.xml"	--> print filename(s) and also the line in those files which has PATTERN in current and sub-directories. --include only look for files with certain extensions
 
-cat -n <file>					--> display the contents of <file> [-n display line numbers]
-
-tail -f <file>					--> display the last 10 lines of <file> and monitor appension of new line [ctrl+c to go back to terminal]
-
 less -N <file>					--> display the contents of <file> by page [-N display line numbers]
 less +F <file>					--> monitor appension of new line after end of line [ ctrl+c to return to regular less mode, shift+f to start monitoring again]
 less --help
-searching using less command is case-sensitive by default. Type '-I' in less to do case-insensitive search
+searching using less command is case-sensitive by default. Type '-i' in less to do case-insensitive search
+
+tail -f <file>					--> display the last 10 lines of <file> and monitor appension of new line [ctrl+c to go back to terminal]
+cat -n <file>					--> display the contents of <file> [-n display line numbers]
 
 file <foo>						--> display the type of file <foo>
 file *							--> display the type of all files in PWD
