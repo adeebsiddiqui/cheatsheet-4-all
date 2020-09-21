@@ -25,9 +25,8 @@ $ git checkout .	--> discard changes in Working Directory for all tracked files 
 
 $ git add .			--> stage all the files in current Working Directory to Index
 
-$ git reset [<file>]...					--> unstage all/specific tracked file(s). To be more specific, Reset all/specific tracked files in HEAD+Index to latest commit + preserve changes to ALL files in Working Directory.
-$ git reset <commit-hash> [<file>]...	--> Discard all commits after <commit-hash> + Reset all/specific tracked files in HEAD+Index to <commit-hash> + preserve changes to ALL files in Working Directory.
-& git reset --hard [<file>]...			--> Reset all/specific tracked files in HEAD+Index+Working Directory to the latest commit + preserve changes to untracked files in working directory.
+$ git reset [<file>]...					--> unstage all/specific tracked file(s) + preserve changes to ALL files in Working Directory.
+& git reset --hard [<commit-hash>]		--> Reset all tracked files in HEAD+Index+Working Directory to the latest commit / commit-hash + preserve changes to untracked files in working directory.
 
 ***** git reset is same as git reset --mixed *****
 ***** git reset --soft/mixed/hard can be used using commit-hash or HEAD/HEAD~1/HEAD~2... *****
