@@ -15,13 +15,14 @@ ctrl+r							--> search command history while typing [keep pressing Ctrl+R to se
 
 mkdir <foo>						--> creates a directory or folder named foo
 
-touch <file>... 				--> create or update file(s)
+touch <file>... 				--> create file(s)
 
 cd /							--> go to root directory
 cd OR cd ~						--> go to home directory
 cd -							--> go to the last directory you were just in
 
 ls								--> list items in currrent directory
+
 ls -l							--> list items in currrent directory in long format
 ls -a							--> list items in currrent directory including hidden files or folders [note: hidden files starts with '.' in UNIX]
 ls -al							--> list items in currrent directory in long format including hidden files or folders
@@ -37,16 +38,16 @@ rm -f <foo>						--> force delete a file or directory
 
 clip < <file>					-->	copy texts of file to clipboard [for MAC use pbcopy, for Linux install xclip then use it]
 
-find [PATH] -name <foo>			--> Find a file/folder called <foo> in PATH and its sub-directories [find command is by default case-sensitive, type '-iname' for case-insensitive search]
-find -type f -name <file>		--> Find a file called <file> in current and sub-directories
-find -type d -name <folder>		--> Find a folder called <folder> in current and sub-directories
-find -maxdepth 1 -name <foo>  	--> Find a file/folder called <foo> in current directory only
+find <PATH> -name '<foo>'				--> Find a file/folder called <foo> in PATH and its sub-directories [find command is by default case-sensitive, type '-iname' for case-insensitive search]
+find <PATH> -type f -name '<file>'		--> Find a file called <file> in PATH and its sub-directories
+find <PATH> -type d -name '<folder>'	--> Find a folder called <folder> in PATH and its sub-directories
+find <PATH> -maxdepth 1 -name '<foo>'  	--> Find a file/folder called <foo> in PATH only
 
 locate -i <foo>					--> Same as 'find' but used for faster and simpler search [-i ignore case]
 
-grep -wi PATTERN <file>... 		--> find PATTERN in file(s) named <file>... in current directory. If found then print the line which has the PATTERN [-w force PATTERN to match only whole words, -i ignore case of PATTERN]
-grep -ln PATTERN <file>... 		--> -l print only filename, not line. -n print line number [DO NOT use -l and -n options together]
-grep -r PATTERN --include="*.xml"	--> print filename(s) and also the line in those files which has PATTERN in current and sub-directories. --include only look for files with certain extensions
+grep -wi PATTERN <file>... <PATH>			--> find PATTERN in file(s) named <file>... in PATH. If found then print the line which has the PATTERN [-w force PATTERN to match only whole words, -i ignore case of PATTERN]
+grep -ln PATTERN <file>... <PATH>			--> -l print only filename, not line. -n print line number [DO NOT use -l and -n options together]
+grep -r PATTERN <PATH> --include="*.xml"	--> print filename(s) and also the line in those files which has PATTERN in PATH and its sub-directories. --include only look for files with certain extensions
 
 less -N <file>					--> display the contents of <file> by page [-N display line numbers]
 less +F <file>					--> monitor appension of new line after end of line [ ctrl+c to return to regular less mode, shift+f to start monitoring again]
