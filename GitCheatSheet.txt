@@ -55,13 +55,12 @@ $ git branch -d <branch>				--> delete the branch if it has already been fully m
 $ git branch -D <branch>				--> delete the branch irrespective of its merged status
 
 $ git checkout feature					--> go to branch named 'feature'
-$ git checkout -b feature				--> create 'feature' branch off of last commit of currently checked out branch and immediately go to 'feature' branch
-$ git checkout -b feature <commit-hash>	--> create 'feature' branch off of commit-hash of currently checked out branch and immediately go to 'feature' branch
-$ git checkout -b feature master		--> create 'feature' branch off of last commit of 'master' branch and immediately go to 'feature' branch
+$ git checkout -b feature				--> create 'feature' branch off of latest commit of currently checked out branch and immediately go to 'feature' branch
+$ git checkout -b feature master		--> create 'feature' branch off of latest commit of 'master' branch and immediately go to 'feature' branch
 $ git checkout <commit-hash>			--> move HEAD to <commit-hash> results in creating a 'detached HEAD' //https://git-scm.com/docs/git-checkout/#_detached_head
 
 
-$ git stash 				--> stores away the dirty state (i.e. tracked but uncommitted files) of a branch in the 'Stash Stack'
+$ git stash 				--> stores away the dirty state (i.e. new changes to tracked files not yet staged) of a branch in the 'Stash Stack'
 $ git stash list			--> See list of stashes stored on the 'Stash Stack'
 $ git stash save 'message'	--> Stash with a message
 $ git stash save -u			--> Stash untracked files also
