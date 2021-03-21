@@ -2,7 +2,7 @@ Legend: <> = variable, [] = optional
 ====================================
 Theory
 ------
-Working Tree/Directory -> Index/Staging Area -> Local Repository -> Remote Repository
+Working Tree/Directory -> Index/Staging Area -> Local Repository --> Remote Repository
 A file is 'Untracked' in Working Directory if it is not in index or has never been committed to Local Repository
 HEAD 'usually' is a reference to the most recent commit in currently checked-out branch. The latest commit in a branch is also known as 'the tip' of the branch.
 HEAD~ or HEAD~1 = Commit-hash previous to the latest one
@@ -93,11 +93,12 @@ $ git rebase -i <commit-hash>	--> to edit/squash previous commits [https://www.i
 $ git cherry-pick <commit-hash>		--> Merge specific commit(s) of another branch to current branch
 
 
-$ git diff [file]						--> Show changes between the Working Directory and the Index of tracked file
-$ git diff HEAD [file]					--> Show changes between the Working Directory and the HEAD of tracked file
-$ git diff <commit1> <commit2> [file]	--> Show changes between two different commits of tracked file
-$ git diff HEAD HEAD~1 [file]			--> Show changes between HEAD and HEAD-1 versions of tracked file
-$ git difftool [xyz]					--> run a code comparing tool to show differences
+$ git diff [file]						    --> Show changes between the Working Directory and the Index of tracked file
+$ git diff HEAD [file]					    --> Show changes between the Working Directory and the HEAD of tracked file
+$ git diff <commit1> <commit2> [file]	    --> Show changes between two different commits of tracked file
+$ git diff HEAD HEAD~1 [file]			    --> Show changes between HEAD and HEAD-1 versions of tracked file
+$ git diff <branch1> <branch2> --name-only  --> Show only names of changed files between two branches
+$ git difftool [xyz]					    --> run a code comparing tool to show differences
 
 
 Recover from git reset --hard
