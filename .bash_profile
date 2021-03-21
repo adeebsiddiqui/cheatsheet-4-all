@@ -1,11 +1,20 @@
 # This file should placed in home directory ~
 
 alias ll='ls -al';
+
+# Git commands
 alias gs='git status';
 alias gl='git log --oneline';
 alias gg='git log --oneline --graph --decorate --all';
+
+# Gradle commands
 alias gcb='clear;./gradlew clean build';
 alias gct='clear;./gradlew clean test';
+
+# Docker commands
+alias dcd='docker-compose down';
+alias dcp='docker container prune';
+alias dsp='docker system prune -a';
 
 #!/usr/bin/env bash
 
