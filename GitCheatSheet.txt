@@ -28,9 +28,9 @@ $ git add .			--> stage all the files in current Working Directory to Index
 $ git reset [<file>]...					--> unstage all/specific tracked file(s) + preserve changes to ALL files in Working Directory.
 & git reset --hard [<commit-hash>]		--> Reset all tracked files in HEAD+Index+Working Directory to the latest commit / commit-hash + preserve changes to untracked files in working directory.
 
-***** git reset is same as git reset --mixed *****
-***** git reset --soft/mixed/hard can be used using commit-hash or HEAD/HEAD~1/HEAD~2... *****
-***** To learn in depth about git reset check out the bookmarked pages *****
+##### git reset is same as git reset --mixed #####
+##### git reset --soft/mixed/hard can be used using commit-hash or HEAD/HEAD~1/HEAD~2... #####
+##### To learn in depth about git reset check out the bookmarked pages #####
 
 
 $ git commit 					--> Commit changes to Local Repository
@@ -44,7 +44,7 @@ $ git log --oneline --graph --decorate --all --> show graph in terminal
 $ gitk --all	--> show graph in a new window
 
 
-***** NON COMMITTED changes in one branch ROLLS OVER to the other checked out branch, so its better to STASH or COMMIT changes before switching branches ***** 
+##### NON COMMITTED changes in one branch ROLLS OVER to the other checked out branch, so its better to STASH or COMMIT changes before switching branches ##### 
 
 
 $ git branch							--> list all local branches
@@ -86,7 +86,7 @@ $ git merge --abort				--> abort the current conflict resolution process and try
 $ git mergetool	[xyz]			--> run a code comparing tool to resolve merge conflicts
 
 $ git rebase <branch-name>		--> Rebase current branch with branch-name
-*** if there are merge conflicts, resolve them then mark them as resolved using git add and then do git rebase --continue ***
+##### if there are merge conflicts, resolve them then mark them as resolved using git add and then do git rebase --continue #####
 
 $ git rebase -i <commit-hash>	--> to edit/squash previous commits [https://www.internalpointers.com/post/squash-commits-into-one-git]
 
