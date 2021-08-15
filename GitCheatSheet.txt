@@ -70,13 +70,14 @@ $ git stash drop			--> Delete latest stash from 'Stash Stack' (add stash-id to d
 
 
 $ git fetch										--> update all remote-tracking branches info. No files are updated in Working Directory or Local Repository
-$ git pull										--> fetch and merge from remote version of the current local branch to Working Directory and also update all the other remote-tracking branches info
-$ git push										--> push code to remote version of the current local branch
+$ git pull										--> fetch and merge to Working Directory from the remote repo version of the current local branch and also update all the other remote-tracking branches info
+$ git push										--> push code to remote repo version of the current local branch
+$ git push -u origin <branchname>				--> create a branch named 'branchname' at the remote repo with alias 'origin' and push code there from current local branch
 $ git clone <local repo path/remote repo url>	--> clone a repository into current directory
 
 $ git remote [-v]								--> shows aliases of list of tracked Remote Repositories; -v shows the url as well
-$ git remote add <remoteRepoAlias> <URL>		--> add a remote repo to list of tracked Remote Repositories
-$ git remote remove <remoteRepoAlias> 			--> remove alias of remote repo from list of tracked Remote Repositories
+$ git remote add <origin> <URL>					--> add remote repo at URL to list of tracked Remote Repositories by an alias named 'origin'
+$ git remote remove <origin>					--> remove remote repo alias 'origin' from list of tracked Remote Repositories
 
 
 $ git merge feature				--> Add a new merge commit in current branch after selecting all the commits from feature branch which are not in current branch and add them to current branch by positioning them based on ascending commit time of non-identical commits between current and feature branch
