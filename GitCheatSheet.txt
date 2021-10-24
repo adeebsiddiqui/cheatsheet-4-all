@@ -21,7 +21,7 @@ $ git status
 
 $ git init [<directory>] 	--> Create a new local repository in specified directory
 
-$ git checkout .	--> discard changes in Working Directory for all tracked files only
+$ git restore .	--> discard changes in Working Directory for all tracked files only
 
 $ git add .			--> stage all the files in current Working Directory to Index
 
@@ -51,25 +51,26 @@ $ git branch							--> list all local branches
 $ git branch -r							--> list all remote branches
 $ git branch -a							--> list all local + remote branches
 $ git branch feature					--> create a branch named 'feature'
-$ git branch -d <branch>				--> delete the branch if it has already been fully merged in its upstream branch
-$ git branch -D <branch>				--> delete the branch irrespective of its merged status
+$ git branch -d <branch>				--> delete the local branch if it has already been fully merged in its upstream/remote branch
+$ git branch -D <branch>				--> delete the local branch irrespective of its merged status
 
-$ git checkout feature					--> go to branch named 'feature'
-$ git checkout -						--> Return to previously checked out branch
-$ git checkout -b feature				--> create 'feature' branch off of latest commit of currently checked out branch and immediately go to 'feature' branch
-$ git checkout -b feature master		--> create 'feature' branch off of latest commit of 'master' branch and immediately go to 'feature' branch
+$ git switch feature					--> go to branch named 'feature'
+$ git switch -						--> Return to previously checked out branch
+$ git switch -c feature				--> create 'feature' branch off of latest commit of currently checked out branch and immediately go to 'feature' branch
+$ git switch -c feature master		--> create 'feature' branch off of latest commit of 'master' branch and immediately go to 'feature' branch
+
 $ git checkout <commit-hash>			--> move HEAD to <commit-hash> results in creating a 'detached HEAD' //https://git-scm.com/docs/git-checkout/#_detached_head
 
-
-$ git stash 				--> stores away the dirty state (i.e. new changes to tracked files not yet staged) of a branch in the 'Stash Stack'
-$ git stash list			--> See list of stashes stored on the 'Stash Stack'
-$ git stash push -u			--> Stash untracked files also
+$ git stash 					--> stores away the dirty state (i.e. new changes to tracked files not yet staged) of a branch in the 'Stash Stack'
+$ git stash list				--> See list of stashes stored on the 'Stash Stack'
+$ git stash push -u				--> Stash untracked files also
 $ git stash push -m 'message'	--> Stash with a message
-$ git stash pop 			--> Removes the top most stash from the 'Stash Stack' and applies it
-$ git stash drop			--> Delete latest stash from 'Stash Stack' (add stash-id to delete specific stash)
+$ git stash pop 				--> Removes the top most stash from the 'Stash Stack' and applies it
+$ git stash drop				--> Delete latest stash from 'Stash Stack' (add stash-id to delete specific stash)
 
 
 $ git fetch										--> update all remote-tracking branches info. No files are updated in Working Directory or Local Repository
+$ git fetch -p									--> Before fetching, remove any remote-tracking references that no longer exist on the remote
 $ git pull										--> fetch and merge to Working Directory from the remote repo version of the current local branch and also update all the other remote-tracking branches info
 $ git push										--> push code to remote repo version of the current local branch
 $ git push -u origin <branchname>				--> create a branch named 'branchname' at the remote repo with alias 'origin' and push code there from current local branch
