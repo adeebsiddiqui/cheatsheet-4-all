@@ -10,6 +10,7 @@ stages:
 - deploy
 
 # Using the include keyword allows the inclusion of external YAML files
+# files under `include` are always evaluated first and merged with the content of `.gitlab-ci.yml`, regardless of the position of the `include` keyword
 include:
 - 'https://abc.com/learn.yml'
 
