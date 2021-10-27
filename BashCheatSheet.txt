@@ -65,6 +65,12 @@ alias <alias_name>='command' 	--> Create an alias called <alias_name> for 'comma
 unalias <alias_name> 			--> Remove alias
 
 
-For Redirection and Piping see Ryan's Tutorials - https://ryanstutorials.net/linuxtutorial/piping.php
+Good Reads
+----------
+Redirection and Piping - https://ryanstutorials.net/linuxtutorial/piping.php
 
 https://askubuntu.com/questions/12098/what-does-outputting-to-dev-null-accomplish-in-bash-scripts
+
+https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux
+
+https://linuxize.com/post/bashrc-vs-bash-profile, https://apple.stackexchange.com/questions/51036/what-is-the-difference-between-bash-profile-and-bashrc
