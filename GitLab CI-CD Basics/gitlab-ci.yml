@@ -14,6 +14,7 @@ stages:
 include:
 - 'https://abc.com/learn.yml'
 
+# Hidden job (https://docs.gitlab.com/ee/ci/jobs/#hide-jobs)
 .job_template: &test_definition  # defines an anchor named 'test_definition'
   image: docker.repo.abc.com/abc/...
   stage: test
@@ -30,7 +31,7 @@ compile:
 
 # Define job(s) for the test stage
 test:    
-    <<: *test_definition
+    extends: .job_template
     script:
     - echo "running code analysis..."
 
