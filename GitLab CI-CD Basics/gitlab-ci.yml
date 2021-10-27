@@ -1,0 +1,51 @@
+# Basic summary of .gitlab-ci.yml - source: https://docs.gitlab.com/ee/ci/yaml/README.html
+
+# The keyword `image` is used to specify which docker image to use to test and build the application
+image: docker.repo.abc.com/abc/...
+
+# Define CI pipeline stages that contain jobs and the order they will be executed in
+stages:
+- build
+- test
+- deploy
+
+# Using the include keyword allows the inclusion of external YAML files
+include:
+- 'https://abc.com/learn.yml'
+
+.job_template: &test_definition  # defines an anchor named 'test_definition'
+  image: docker.repo.abc.com/abc/...
+  stage: test
+  tags: # The `tags` keyword is used to select specific Runners for the list of all runners that are allowed to run the project
+  - docker
+
+# Define job(s) for the build stage
+compile:
+    stage: build
+    script:
+    - echo "building application..."
+    tags:
+    - docker 
+
+# Define job(s) for the test stage
+test:    
+    <<: *test_definition
+    script:
+    - echo "running code analysis..."
+
+test2:
+    <<: *test_definition
+    script:
+    - echo "running unit tests..."
+
+# Define job(s) for the deploy stage
+deploy-app:
+    stage: deploy
+    script:
+    - echo "deploying application..."
+    tags:
+    - docker
+    only: # only defines the names of branches and tags for which the job will run.
+    - master
+    except: # except defines the names of branches and tags for which the job will not run.
+    - feature
