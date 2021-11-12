@@ -52,7 +52,8 @@ grep -r PATTERN PATH --include="*.xml"	--> print filename(s) and also the line i
 less -N <file>					--> display the contents of <file> by page [-N display line numbers]
 less +F <file>					--> monitor appension of new line after end of line [ ctrl+c to return to regular less mode, shift+f to start monitoring again]
 less --help
-searching using less command is case-sensitive by default. Type '-i' in less to do case-insensitive search
+searching using less command is case-sensitive by default. Type '-i' in less to do case-insensitive search.
+Unhighlight last search in 'less' --> Esc, u OR alt+u
 
 tail -f <file>					--> display the last 10 lines of <file> and monitor appension of new line [ctrl+c to go back to terminal]
 cat -n <file>					--> display the contents of <file> [-n display line numbers]
@@ -65,7 +66,7 @@ alias <alias_name>='command' 	--> Create an alias called <alias_name> for 'comma
 unalias <alias_name> 			--> Remove alias
 
 
-Good Reads
+Must Reads
 ----------
 Redirection and Piping - https://ryanstutorials.net/linuxtutorial/piping.php
 
