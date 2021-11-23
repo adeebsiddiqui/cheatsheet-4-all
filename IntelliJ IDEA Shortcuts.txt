@@ -1,6 +1,8 @@
 https://www.jetbrains.com/help/idea/reference-keymap-win-default.html
 https://www.jetbrains.com/help/idea/reference-keymap-mac-default.html
 
+Recent Files
+
 Auto-Indent Lines
 Optimize Imports
 Reformat Code
@@ -8,13 +10,23 @@ Rename...
 Refactor this...
 
 Complete Current Statement
+Join Lines
+Extract Method...
+Introduce Variable...
 Surround with...
 
 File Structure
 Next/Previous Method
 Find Next / Move to Next Occurrence
 Find Previous / Move to Previous Occurrence
+Next/Previous Highlighted Error
+Back
+Forward
+Select Next/Previous Tab
+
 Find Usages
+Go to Declaration or Usages
+Go to Implementation(s)
 
 Extend/Shrink Selection
 Move Statement Up/Down
@@ -22,3 +34,5 @@ Move Line Up/Down
 
 Add/Remove Caret
 Clone Caret Above/Below
+
+Navigate To Test
