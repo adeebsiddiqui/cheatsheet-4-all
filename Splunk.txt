@@ -1,0 +1,29 @@
+Search Samples
+=============
+[All search queries are done for a certain period]
+
+| stats count BY state | where count > 5
+	• count the number of occurences of each distinct value of state field where count is greater than 5
+
+| stats count BY state, user | sort -count
+	• Count the number of occurences of each distinct value of state+user combo | sort count in descending order
+
+| stats avg(salary) BY employee_type
+	• Calculate average salary for each distinct value of employee_type
+
+| timechart span=1hr count BY user
+	• X-Axis --> time incremented by 1 hr
+	• Y-Axis --> count for each distinct value of user
+
+| timechart span=1hr max(salary)BY employee_type
+	• X-Axis --> time incremented by 1 hr
+	• Y-Axis --> max salary for each distinct value of employee_type
+
+| chart avg(salary) BY employee_type
+	• X-Axis --> employee_type
+	• Y-Axis --> avg salary for each distinct value of employee_type
+	
+| top errorcode BY level
+	• display the top errorcodes for each distinct level
+
+|eval <variable> = any statement
