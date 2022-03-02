@@ -11,7 +11,8 @@ Commands
 --------
 $ git config --global user.name "Adeeb Siddiqui"
 $ git config --global user.email "adeeb.bd@gmail.com"
-##### Above two configs will be set globally in .gitconfig file [.gitconfig file is located in C:\Users\Adeeb]
+$ git config --global remote.origin.prune true  //Automatic branch prune with git fetch or pull
+##### Above three configs will be set globally in .gitconfig file [.gitconfig file is located in C:\Users\Adeeb]
 
 $ git config -l | --list		--> list all git configuration variables
 
