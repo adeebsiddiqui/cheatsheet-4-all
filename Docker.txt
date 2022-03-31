@@ -5,6 +5,9 @@ docker ps
 docker-compose up --build
 docker-compose down
 
+docker system prune -a
+docker container prune
+
 See logs locally in Docker Container
 docker logs -f <container_id> [get the container_id from docker ps]
 
@@ -20,6 +23,6 @@ rm -rf ~/Library/Containers/com.docker.helper
 https://github.com/docker/for-mac/issues/853
 
 Documentation
-———————
+-------------
 https://docs.docker.com/compose/compose-file/compose-file-v2/
 https://docs.docker.com/engine/reference/run/
