@@ -10,7 +10,7 @@ alias gg='git log --oneline --graph --decorate --all';
 # Gradle commands
 alias gcb='clear;./gradlew clean build';
 alias gct='clear;./gradlew clean test';
-alias gdi='clear;./gradlew dependencyInsight --dependency'; # Usage --> gdi <component> ; https://stackoverflow.com/questions/39136789/how-to-understand-the-output-of-command-gradle-dependencies
+alias gdp='clear;./gradlew dependencyInsight --dependency'; # Usage --> gdp <component> ; https://stackoverflow.com/questions/39136789/how-to-understand-the-output-of-command-gradle-dependencies
 
 # Docker commands
 alias dcd='docker-compose down';
