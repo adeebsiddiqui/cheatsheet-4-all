@@ -36,7 +36,9 @@ rm <file>... 					--> remove or delete file(s)
 rm -r <foo>... 					--> remove or delete directory(s)
 rm -f <foo>						--> force delete a file or directory
 
-clip < <file>					-->	copy texts of file to clipboard [for MAC use pbcopy, for Linux install xclip then use it]
+clip < <file>					-->	copy text in file to clipboard [Windows]
+cat <file> | pbcopy			    -->	copy text in file to clipboard [MAC]
+for Linux install xclip
 
 find PATH -name '<foo>'				--> Find a file/folder called <foo> in PATH and its sub-directories [find command is by default case-sensitive, type '-iname' for case-insensitive search]
 find PATH -type f -name '<file>'	--> Find a file called <file> in PATH and its sub-directories
