@@ -22,20 +22,17 @@ $ git status
 
 $ git init [<directory>] 	--> Create a new local repository in specified directory
 
-$ git restore .	--> discard changes in Working Directory for all tracked files only
-
 $ git add .			--> stage all the files in current Working Directory to Index
 
-$ git reset [<file>]...					--> unstage all/specific tracked file(s) + preserve changes to ALL files in Working Directory.
+$ git restore [<file>]...               --> discard changes in Working Directory for all tracked files only
+$ git restore -S [<file>]...			--> unstage all/specific tracked file(s) + preserve changes to ALL files in Working Directory.
 & git reset --hard [<commit-hash>]		--> Reset all tracked files in HEAD+Index+Working Directory to the latest commit / commit-hash + preserve changes to untracked files in working directory.
 
 ##### git reset is same as git reset --mixed #####
 ##### git reset --soft/mixed/hard can be used using commit-hash or HEAD/HEAD~1/HEAD~2... #####
 ##### To learn in depth about git reset check out the bookmarked pages #####
 
-
-$ git commit 					--> Commit changes to Local Repository
-$ git commit -m 'message'		--> Commit changes with a message
+$ git commit -m 'message'		--> Commit changes to Local Repository with a message
 $ git commit -am 'message'		--> except Untracked files, commit all the changes in Working Directory to Local Repository directly
 $ git commit --amend -m 'New message'	--> edit most recent commit message
 
@@ -48,19 +45,19 @@ $ gitk --all	--> show graph in a new window
 ##### NON COMMITTED changes in one branch ROLLS OVER to the other checked out branch, so its better to STASH or COMMIT changes before switching branches ##### 
 
 
-$ git branch							--> list all local branches
-$ git branch -r							--> list all remote branches
-$ git branch -a							--> list all local + remote branches
-$ git branch feature					--> create a branch named 'feature'
-$ git branch -d <branch>				--> delete the local branch if it has already been fully merged in its upstream/remote branch
-$ git branch -D <branch>				--> delete the local branch irrespective of its merged status
+$ git branch						--> list all local branches
+$ git branch -r						--> list all remote branches
+$ git branch -a						--> list all local + remote branches
+$ git branch feature				--> create a branch named 'feature'
+$ git branch -d <branch>			--> delete the local branch if it has already been fully merged in its upstream/remote branch
+$ git branch -D <branch>			--> delete the local branch irrespective of its merged status
 
-$ git switch feature					--> go to branch named 'feature'
+$ git switch feature				--> go to branch named 'feature'
 $ git switch -						--> Return to previously checked out branch
 $ git switch -c feature				--> create 'feature' branch off of latest commit of currently checked out branch and immediately go to 'feature' branch
 $ git switch -c feature master		--> create 'feature' branch off of latest commit of 'master' branch and immediately go to 'feature' branch
 
-$ git checkout <commit-hash>			--> move HEAD to <commit-hash> results in creating a 'detached HEAD' //https://git-scm.com/docs/git-checkout/#_detached_head
+$ git checkout <commit-hash>		--> move HEAD to <commit-hash> results in creating a 'detached HEAD' //https://git-scm.com/docs/git-checkout/#_detached_head
 
 $ git stash [-u]				--> stores away the dirty state (i.e. new changes to tracked files not yet staged) of a branch in the 'Stash Stack' [-u = Stash untracked files also]
 $ git stash list				--> See list of stashes stored on the 'Stash Stack'
