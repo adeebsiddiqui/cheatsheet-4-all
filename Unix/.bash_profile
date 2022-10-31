@@ -1,6 +1,7 @@
 # This file should placed in home directory ~
 
-alias ll='ls -al';
+alias ll='ls -l';
+alias grep='grep --color=auto';
 
 # Git commands
 alias gs='git status';
