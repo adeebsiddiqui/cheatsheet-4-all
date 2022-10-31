@@ -40,16 +40,16 @@ clip < <file>					-->	copy text in file to clipboard [Windows]
 cat <file> | pbcopy			    -->	copy text in file to clipboard [MAC]
 for Linux install xclip
 
-find PATH -name '<foo>'				--> Find a file/folder called <foo> in PATH and its sub-directories [find command is by default case-sensitive, type '-iname' for case-insensitive search]
-find PATH -type f -name '<file>'	--> Find a file called <file> in PATH and its sub-directories
-find PATH -type d -name '<folder>'	--> Find a folder called <folder> in PATH and its sub-directories
-find PATH -maxdepth 1 -name '<foo>' --> Find a file/folder called <foo> in PATH only
+find [PATH] -name <foo>				--> Find a file/folder called <foo> in PATH and its sub-directories [find command is by default case-sensitive, type '-iname' for case-insensitive search]
+find [PATH] -type f -name <file>	--> Find a file called <file> in PATH and its sub-directories
+find [PATH] -type d -name <folder>	--> Find a folder called <folder> in PATH and its sub-directories
+find [PATH] -maxdepth 1 -name '<foo>' --> Find a file/folder called <foo> in PATH only
 
 locate -i <foo>					--> Same as 'find' but used for faster and simpler search [-i ignore case]
 
-grep -wi PATTERN <file>...				--> find PATTERN in listed file(s). If found then print the line which has the PATTERN [-w force PATTERN to match only whole words, -i ignore case of PATTERN]
-grep -ln PATTERN <file>...				--> -l print only filename, not line. -n print line number [DO NOT use -l and -n options together]
-grep -r PATTERN PATH --include="*.xml"	--> print filename(s) and also the line in those files which has PATTERN in PATH and its sub-directories. --include only look for files with certain extensions
+grep -wi PATTERN <file>...					--> find PATTERN in listed file(s). If found then print the line which has the PATTERN [-w force PATTERN to match only whole words, -i ignore case of PATTERN]
+grep -ln PATTERN <file>...					--> -l print only filename, not line. -n print line number [DO NOT use -l and -n options together]
+grep -r PATTERN [PATH] --include="*.xml"	--> print filename(s) and also the line in those files which has PATTERN in PATH and its sub-directories. --include only look for files with certain extensions
 
 less -N <file>					--> display the contents of <file> by page [-N display line numbers]
 less +F <file>					--> monitor appension of new line after end of line [ ctrl+c to return to regular less mode, shift+f to start monitoring again]
