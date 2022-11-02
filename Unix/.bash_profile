@@ -1,5 +1,7 @@
 # This file should placed in home directory ~
 
+# Shell commands
+alias ls='ls -F --color=auto';
 alias ll='ls -l';
 alias grep='grep --color=auto';
 
