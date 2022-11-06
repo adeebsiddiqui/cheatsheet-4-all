@@ -3,79 +3,74 @@ Vi/Vim has two modes: Command Mode and Insert Mode
 displays all option settings on terminal		-->		:set all
 Code syntax highlighting on						-->		:syntax on
 Display line number								-->		:set nu
-
 [These configurations can be permanently set by creating a .exrc(for Vi+Vim) OR .vimrc(for Vim only) file in $HOME directory ~]
-
-move cursor to beginning of next line		-->		Return/Enter OR +
-move cursor to beginning of previous line	-->		-
-
 
 go to beginning of file		-->		gg
 go to end of file			-->		G
 go to line n				-->		:n OR ngg OR nG
 
+scroll down one line	-->		Ctrl+e
+scroll up one line		-->		Ctrl+y
+scroll down one screen	-->		Ctrl+f
+scroll up one screen	-->		Ctrl+b
 
-scroll down one line			-->		ctrl+e
-scroll up one line				-->		ctrl+y
-scroll down one screen			-->		ctrl+f
-scroll up one screen			-->		ctrl+b
-scroll down one-half screen		-->		ctrl+d
-scroll up one-half screen		-->		ctrl+u
-
-
-move forward one word	-->		w
-move backward one word	-->		b
-move to end of word		-->		e
-
-
-move to beginning of line					-->		0(zero)
+move to beginning of line					-->		0
 move to beginning of line after whitespace	-->		^
 move to end of line							-->		$
 
+move forward one word	-->		w
+move backward one word	-->		b
 
 move to previous sentence	-->		(
 move to next sentence		-->		)
 move to previous paragraph	-->		{
 move to next paragraph		-->		}
 
-
 undo last change	-->		u
-redo last change	-->		ctrl+r
+redo last change	-->		Ctrl+r
 undo all changes on a single line --> U
-
 
 insert new line after current line		-->		o
 insert new line before current line		-->		O
-insert at the end of line				-->		shift+a
-
+insert at the end of line				-->		A
 
 delete/cut character on cursor				-->		x
-delete/cut next n characters from cursor	-->		nx
 
+delete/cut current word                     -->		diw
 delete/cut from cursor to end of word		-->		dw
 delete/cut from cursor to next n words		-->		ndw
 
-delete/cut from cursor to end of line		-->		D OR d$
-delete/cut from cursor to beginning of line	-->		d0(zero)
+delete/cut from cursor to end of sentence		-->		d)
+delete/cut from cursor to beginning of sentence	-->		d(
 
-delete/cut enitre line			-->		dd
-delete/cut entire n lines		-->		ndd
+delete/cut from cursor to end of line		-->		d$ OR D
+delete/cut from cursor to beginning of line	-->		d0
 
-delete/cut everything from cursor to end of file --> dG
+delete/cut enitre line		-->		dd
+delete/cut entire n lines	-->		ndd
 
-copy from cursor to end of word		-->		yw
-copy entire line					-->		yy
+Replace 'd's with 'y's for copy
 
-paste after cursor		-->		p
 paste before cursor		-->		P
+paste after cursor		-->		p
+Copy, Cut, and Paste in Visual Mode --> v / V / Ctrl+v 
 
 /pattern		-->		search pattern forward [n - next match, N - previous match]
 ?pattern		-->		search pattern backward [by default, searches are case sensitive. In command mode, :set ic - case insensitive search, :set noic - revert back to case sensitive search]
 /\<pattern\>	-->		search exact pattern [by default, search results are not highlighted. In command mode, :set hlsearch - highlighted search, :set nohlsearch - revert back to non highlighted search]
 
-replace all occurences of pattern 1 with pattern 2 throughout the file	-->		:%s/pat1/pat2/gc [c to get a confirmation message]
-
+Replace all occurences of pattern 1 with pattern 2 throughout the file	-->		:%s/pat1/pat2/gc [c to get a confirmation message]
 
 save file						-->		:w
 exit file without saving change	-->		:q!
 save and exit file				-->		:wq OR :x
+
+========== Good to know =================
+move cursor to beginning of next line		-->		Return/Enter OR +
+move cursor to beginning of previous line	-->		-
+
+scroll down one-half screen		-->		Ctrl+d
+scroll up one-half screen		-->		Ctrl+u
+
+delete/cut next n characters from cursor	-->		nx
+delete/cut everything from cursor to end of file --> dG
