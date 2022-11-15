@@ -14,12 +14,12 @@ scroll up one line		-->		ctrl+y
 scroll down one screen	-->		ctrl+f
 scroll up one screen	-->		ctrl+b
 
-move forward one word	-->		w
-move backward one word	-->		b
-
 move to beginning of line					-->		0
 move to beginning of line after whitespace	-->		^
 move to end of line							-->		$
+
+move forward one word	-->		w
+move backward one word	-->		b
 
 move to previous sentence	-->		(
 move to next sentence		-->		)
@@ -33,6 +33,8 @@ undo all changes on a single line --> U
 insert new line after current line		-->		o
 insert new line before current line		-->		O
 insert at the end of line				-->		A
+
+delete/cut character on cursor				-->		x
 
 delete/cut from cursor to end of word		-->		dw
 delete/cut from cursor to next n words		-->		ndw
@@ -70,6 +72,5 @@ scroll up one-half screen		-->		ctrl+u
 
 move to end of word		-->		e
 
-delete/cut character on cursor				-->		x
 delete/cut next n characters from cursor	-->		nx
 delete/cut everything from cursor to end of file --> dG
