@@ -58,7 +58,7 @@ searching using less command is case-sensitive by default. Type '-i' in less to 
 Unhighlight last search in 'less' --> Esc, u OR alt+u
 
 tail -f <file>					--> display the last 10 lines of <file> and monitor appension of new line [ctrl+c to go back to terminal]
-cat -n <file>					--> display the contents of <file> [-n display line numbers]
+cat <file>                      --> display the contents of <file>
 
 file <foo>						--> display the type of file <foo>
 file *							--> display the type of all files in PWD
