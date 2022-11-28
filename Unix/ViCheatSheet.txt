@@ -36,13 +36,14 @@ insert at the end of line				-->		A
 
 delete/cut character on cursor				-->		x
 
+delete/cut current word                     -->		diw
 delete/cut from cursor to end of word		-->		dw
 delete/cut from cursor to next n words		-->		ndw
 
 delete/cut from cursor to end of sentence		-->		d)
 delete/cut from cursor to beginning of sentence	-->		d(
 
-delete/cut from cursor to end of line		-->		D OR d$
+delete/cut from cursor to end of line		-->		d$ OR D
 delete/cut from cursor to beginning of line	-->		d0
 
 delete/cut enitre line		-->		dd
@@ -52,6 +53,7 @@ Replace 'd's with 'y's for copy
 
 paste before cursor		-->		P
 paste after cursor		-->		p
+Copy, Cut, and Paste in Visual Mode - https://linuxize.com/post/how-to-copy-cut-paste-in-vim/#copy-cut-and-paste-in-visual-mode
 
 /pattern		-->		search pattern forward [n - next match, N - previous match]
 ?pattern		-->		search pattern backward [by default, searches are case sensitive. In command mode, :set ic - case insensitive search, :set noic - revert back to case sensitive search]
@@ -69,8 +71,6 @@ move cursor to beginning of previous line	-->		-
 
 scroll down one-half screen		-->		ctrl+d
 scroll up one-half screen		-->		ctrl+u
-
-move to end of word		-->		e
 
 delete/cut next n characters from cursor	-->		nx
 delete/cut everything from cursor to end of file --> dG
