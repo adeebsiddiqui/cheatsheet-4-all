@@ -64,6 +64,7 @@ $ git stash list				--> See list of stashes stored on the 'Stash Stack'
 $ git stash push -m 'message'	--> Stash with a message
 $ git stash pop 				--> Removes the top most stash from the 'Stash Stack' and applies it
 $ git stash drop				--> Delete latest stash from 'Stash Stack' (add stash-id to delete specific stash)
+$ git stash show [-p]           --> show changes between HEAD and stashed contents
 
 
 $ git fetch										--> update all remote-tracking branches info. No files are updated in Working Directory or Local Repository
