@@ -11,7 +11,7 @@ man <command>
 history							--> show command history
 !history_number					--> Run that particular command
 
-ctrl+r							--> search command history while typing [keep pressing Ctrl+R to see commands having typed word from history. Hit any arrow button to select the command you want to execute]
+Ctrl+r							--> search command history while typing [keep pressing Ctrl+r to see commands having typed word from history. Hit any arrow button to select the command you want to execute]
 
 mkdir <foo>						--> creates a directory or folder named foo
 
@@ -52,12 +52,12 @@ grep -ln PATTERN <file>...					--> -l print only filename, not line. -n print li
 grep -r PATTERN [PATH] --include="*.xml"	--> print filename(s) and also the line in those files which has PATTERN in PATH and its sub-directories. --include only look for files with certain extensions
 
 less -N <file>					--> display the contents of <file> by page [-N display line numbers]
-less +F <file>					--> monitor appension of new line after end of line [ ctrl+c to return to regular less mode, shift+f to start monitoring again]
+less +F <file>					--> monitor appension of new line after end of line [ Ctrl+c to return to regular less mode, Shift+f to start monitoring again]
 less --help
 searching using less command is case-sensitive by default. Type '-i' in less to do case-insensitive search.
-Unhighlight last search in 'less' --> Esc, u OR alt+u
+Unhighlight last search in 'less' --> Esc, u OR Alt+u
 
-tail -f <file>					--> display the last 10 lines of <file> and monitor appension of new line [ctrl+c to go back to terminal]
+tail -f <file>					--> display the last 10 lines of <file> and monitor appension of new line [Ctrl+c to go back to terminal]
 cat <file>                      --> display the contents of <file>
 
 file <foo>						--> display the type of file <foo>
