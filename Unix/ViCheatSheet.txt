@@ -58,19 +58,11 @@ Copy, Cut, and Paste in Visual Mode --> v / V / Ctrl+v
 /pattern		-->		search pattern forward [n - next match, N - previous match]
 ?pattern		-->		search pattern backward [by default, searches are case sensitive. In command mode, :set ic - case insensitive search, :set noic - revert back to case sensitive search]
 /\<pattern\>	-->		search exact pattern [by default, search results are not highlighted. In command mode, :set hlsearch - highlighted search, :set nohlsearch - revert back to non highlighted search]
+*               -->     search forward for the exact word the cursor is currently under
+#               -->     search backward for the exact word the cursor is currently under
 
 Replace all occurences of pattern 1 with pattern 2 throughout the file	-->		:%s/pat1/pat2/gc [c to get a confirmation message]
 
 save file						-->		:w
 exit file without saving change	-->		:q!
 save and exit file				-->		:wq OR :x
-
-========== Good to know =================
-move cursor to beginning of next line		-->		Return/Enter OR +
-move cursor to beginning of previous line	-->		-
-
-scroll down one-half screen		-->		Ctrl+d
-scroll up one-half screen		-->		Ctrl+u
-
-delete/cut next n characters from cursor	-->		nx
-delete/cut everything from cursor to end of file --> dG
