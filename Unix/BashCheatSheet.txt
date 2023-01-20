@@ -21,12 +21,6 @@ cd /							--> go to root directory
 cd OR cd ~						--> go to home directory
 cd -							--> go to the last directory you were just in
 
-ls								--> list items in currrent directory
-
-ls -l							--> list items in currrent directory in long format
-ls -a							--> list items in currrent directory including hidden files or folders [note: hidden files starts with '.' in UNIX]
-ls -al							--> list items in currrent directory in long format including hidden files or folders
-
 cp <file1> <file2>				--> copy <file1> to <file2>
 cp -r <foo1> <foo2>				--> copy directory <foo1> to <foo2>. create <foo2> if it doesn't exist
 
