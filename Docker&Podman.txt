@@ -1,0 +1,22 @@
+Docker/Podman commands
+----------------------
+[For podman, just replace 'docker' with 'podman'. Commands specific to podman start with 'podman' instead of 'docker']
+
+docker-compose up --build --force-recreate [**requires a docker-compose.yml file in the current directory**]
+
+docker ps -a          --> list all containers
+docker-compose down   --> stop and remove current running container [doesn't stop the virtual machine for Podman]
+
+docker kill <container_id>  --> kill running container
+docker rm <container_id>    --> remove non-running container
+
+docker container prune      --> remove all stopped containers
+docker system prune -a      --> remove all unused containers
+
+podman machine start        --> start virtual machine
+podman machine stop         --> stop virtual machine
+
+Documentation
+-------------
+https://docs.docker.com/engine/reference/commandline/cli/
+https://docs.podman.io/en/latest/Commands.html
