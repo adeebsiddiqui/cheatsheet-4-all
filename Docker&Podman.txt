@@ -7,6 +7,7 @@ docker-compose up --build --force-recreate [**requires a docker-compose.yml file
 docker ps -a          --> list all containers
 docker-compose down   --> stop and remove current running container [doesn't stop the virtual machine for Podman]
 
+docker stop <container_id>  --> stop running container
 docker kill <container_id>  --> kill running container
 docker rm <container_id>    --> remove non-running container
 
