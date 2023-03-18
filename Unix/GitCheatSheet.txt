@@ -61,7 +61,7 @@ $ git checkout <commit-hash>		--> move HEAD to <commit-hash> results in creating
 
 $ git stash [-u]				--> stores away the dirty state (i.e. new changes to tracked files not yet staged) of a branch in the 'Stash Stack' [-u = Stash untracked files also]
 $ git stash list				--> See list of stashes stored on the 'Stash Stack'
-$ git stash push -m 'message'	--> Stash with a message
+$ git stash -m 'message'        --> Stash with a message
 $ git stash pop 				--> Removes the top most stash from the 'Stash Stack' and applies it
 $ git stash drop				--> Delete latest stash from 'Stash Stack' (add stash-id to delete specific stash)
 $ git stash show [-p]           --> show changes between HEAD and stashed contents
