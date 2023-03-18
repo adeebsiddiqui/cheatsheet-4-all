@@ -1,7 +1,7 @@
 # This file should placed in home directory ~
 
 # Shell commands
-alias ls='ls -F --color=auto';
+alias ls='ls -F --color=auto'; # 'ls -FG' in Mac
 alias ll='ls -l';
 alias grep='grep --color=auto';
 
@@ -16,17 +16,9 @@ alias gct='clear;./gradlew clean test';
 alias gtt='clear;./gradlew test --tests'; # Usage --> gtt <TestClassName>
 alias gdp='clear;./gradlew dependencyInsight --dependency'; # Usage --> gdp <component>  //https://stackoverflow.com/questions/39136789/how-to-understand-the-output-of-command-gradle-dependencies
 
-# Docker commands
-alias dcd='docker-compose down';
-alias dcp='docker container prune';
-alias dsp='docker system prune -a';
 
+### Mathias Bynens's bash - https://github.com/mathiasbynens/dotfiles/blob/main/.bash_prompt ###
 #!/usr/bin/env bash
-
-# Shell prompt based on the Solarized Dark theme.
-# Screenshot: http://i.imgur.com/EkEtphC.png
-# Heavily inspired by @necolas’s prompt: https://github.com/necolas/dotfiles
-# iTerm → Profiles → Text → use 13pt Monaco with 1.1 vertical spacing.
 
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
 	export TERM='gnome-256color';
