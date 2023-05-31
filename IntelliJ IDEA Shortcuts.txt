@@ -23,6 +23,7 @@ File Structure
 Next/Previous Method
 Find Next / Move to Next Occurrence
 Find Previous / Move to Previous Occurrence
+Move Caret to Matching Brace
 Next/Previous Highlighted Error
 Back
 Forward
