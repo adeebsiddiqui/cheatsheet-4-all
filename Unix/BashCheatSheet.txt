@@ -2,7 +2,7 @@ Legend: <> = variable, [] = optional
 ====================================
 echo $SHELL OR echo $0          --> current running shell
 
-cat /etc/shells                 --> List f available shells
+cat /etc/shells                 --> List of available shells
 
 chsh -s /bin/zsh                --> change current shell to '/bin/zsh'
 
