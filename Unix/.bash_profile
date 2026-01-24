@@ -14,7 +14,8 @@ alias gg='git log --oneline --graph --decorate --all';
 alias gcb='clear;./gradlew clean build';
 alias gct='clear;./gradlew clean test';
 alias gtt='clear;./gradlew test --tests'; # Usage --> gtt <TestClassName>
-alias gdp='clear;./gradlew dependencyInsight --configuration runtimeClasspath --dependency'; # Usage --> gdp <component>  //https://stackoverflow.com/questions/39136789/how-to-understand-the-output-of-command-gradle-dependencies
+alias gdp='clear;./gradlew dependencyInsight --dependency'; # Usage --> gdp <component>  //https://stackoverflow.com/questions/39136789/how-to-understand-the-output-of-command-gradle-dependencies
+alias gdpr='clear;./gradlew dependencyInsight --configuration runtimeClasspath --dependency';
 
 
 ### Mathias Bynens's bash - https://github.com/mathiasbynens/dotfiles/blob/main/.bash_prompt ###
